@@ -4,6 +4,13 @@
 
 #include"BitFile.hpp"
 
+int BitFile::fileSize(){
+  fseek(fp, 0L, SEEK_END);
+  int size = ftell(fp);
+  rewind(fp);
+  return size;
+}
+
 int BitFile::openBitFile(const char filename[], const char mode[]) {
 //assume mode is either "rb" or "wb"
     
