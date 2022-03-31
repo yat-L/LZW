@@ -20,7 +20,7 @@ public:
                   const char *mode); // mode should be either "rb" or "wb"
   int closeBitFile();
   int writeBit(uint8_t bitval);
-  uint8_t readBit();
+  int readBit();
   int writeBits(uint32_t bits, int count);
   int writeFlush();
   int writeByte(uint8_t byteval);

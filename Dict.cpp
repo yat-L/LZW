@@ -39,7 +39,7 @@ void printRow(std::vector<uint8_t> row) {
   printf("}\n");
 }
 
-std::vector<uint8_t> Dict::index(int i) { return table[i]; }
+std::vector<uint8_t> Dict::index(uint32_t i) { return table[i]; }
 
 bool Dict::checkPattern(std::vector<uint8_t> key) {
   return reverseTable.find(key) != reverseTable.end();
@@ -57,7 +57,15 @@ int Dict::bitLength() {
   }
   if (pos < 4096) {
     return 12;
-  } else {
-    return 12;
   }
+  return 12;
 }
+
+bool Dict::checkIndex(uint32_t index){
+  return index < pos;
+}
+
+void Dict::addPos(){
+  pos++;
+}
+
