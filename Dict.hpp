@@ -1,4 +1,8 @@
-
+/*****************************************************
+COMP4160 Assignment 2
+Student Name: Ho Yat Lui
+Student Number: 7780269
+ *****************************************************/
 #include <cstdint>
 #include <cstdio>
 #include <map>
